@@ -12,7 +12,9 @@ Stampate a schermo il paragrafo censurato e la lunghezza del paragrafo originale
     $censored = "***";
 
     $new_parag = str_replace($badword, $censored, $parag);
-    $lunghezza = strlen($new_parag);
+
+    $lunghezza_originale = strlen($parag);
+    $lunghezza_censurato = strlen($new_parag);
 ?>
 
 <html lang="en" dir="ltr">
@@ -20,7 +22,7 @@ Stampate a schermo il paragrafo censurato e la lunghezza del paragrafo originale
        <meta charset="utf-8">
        <meta name="viewport" content="width=device-width, initial-scale=1">
        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-       <link rel="stylesheet" href="assets/style.css">      
+       <link rel="stylesheet" href="assets/style.css">
        <title>
             Censuratore
         </title>
@@ -30,9 +32,15 @@ Stampate a schermo il paragrafo censurato e la lunghezza del paragrafo originale
             <?php echo $new_parag; ?>
         </p>
         <h2>
-            Lunghezza paragrafo:
+            Lunghezza paragrafo originale:
             <span>
-                <?php echo $lunghezza; ?>
+                <?php echo $lunghezza_originale; ?>
+            </span>
+        </h2>
+        <h2>
+            Lunghezza paragrafo censurato:
+            <span>
+                <?php echo $lunghezza_censurato; ?>
             </span>
         </h2>
     </body>
