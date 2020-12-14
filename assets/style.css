@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #323232;
+    color: lightgrey;
+}
+
+p{
+    width: 1000px;
+    padding: 50px;
+    font-size: 20px;
+}
+
+h2{
+    padding-left: 50px;
+}
+
+h2 span{
+    color: lightgreen;
+}
